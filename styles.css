@@ -1,1 +1,48 @@
 /* Write your CSS here! */
+p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.header {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    margin-left: 50px;     
+}
+
+.image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 50px;   
+    width: 300px;  
+}
+
+.funParagraph {
+    color: green
+}
+
+form {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+body {
+    margin: 8px;
+    display: block;
+    background-color:lightslategray;
+}
+
+#mainHeading {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: xx-large;
+    color: red;
+}
