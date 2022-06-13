@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <header id="mainHeading">A 2021 EULOGY</header><hr>
       <title>Resignation Letter</title>
    </head>
    <body>
+   <link rel="stylesheet" href="styles.css">
    <main>
       <!-- Write your HTML in this file! -->
       <header class="page-header">
          <article class="artcile">
-            <h1>Have you seen &quotMaid&quot on Netflix?</h1>
-               <p>
-                  It follows the story of Alex, a victim of domestic violence, who faces many adversities as she tries to regain control of her life after two years of financial dependency. Alex got to share what a happy day was for her during a group facilitation but she didn't name a moment in the past. Alex shared what a happy day will look like as she and her daughter move toward a brighter future with more certainty than the last episode.
+            <h1 class="header">Have you seen &quotMaid&quot on Netflix?</h1>
+               <p id="testP" class="funParagraph">
+                  It follows the story of Alex, a victim of domestic violence, who faces many adversities as she tries to regain control of her life after two years of financial dependency. (Hovering over the image will provide statistics from CCADV on domestic violence.) Alex got to share what a happy day was for her during a group facilitation but she didn't name a moment in the past. Alex shared what a happy day will look like as she and her daughter move toward a brighter future with more certainty than the last episode.
                </p>
-               <img src="images/Alex.jpeg" alt="Image of Alex from Netflix's &quotMaid&quot"> <!--use mouse on and mouseover event handles to insert image of mom-->
-               <p>
+               <div id="mouseTarget">
+                  <img src="images/Alex.jpeg" alt="Image of Alex from Netflix's &quotMaid&quot" class="image" id="image" <a href="http://127.0.0.1:5500/js-assignment-4-html-me-something-cashhahuynh/index.html" onmouseover="alert('Did you know 1 in 4 women and 1 in 7 men experienced severe physical violence by an intimate partner?')" onmouseout="changeImage()"></a>
+               </div>
+               <p id="p1">
                   I start off with this because the show reminds me of the sacrifices my mom made for me to survive today. As a first generation immigrant, my mom doesn't have the luxury of choice. She did what she needed to do so that my sister and I could have the privilege of choice. Alex's will for survival speaks to me on a deep level because I model my strength and power from my mom's will for survival.
                </p>
-               <p>
+               <p id="p2">
                   I've made many choices in my life that have led me to write this today. A huge choice I made was moving from New Orleans to Maine for college. After college, I made another huge choice and moved to Philadelphia with absolutely nothing lined up. There were many uncertainties to my decision but my mom made it possible to at least take a chance and hope that things will work out. Philadelphia has worked out because of the SeniorLAW Center.
                </p>
          </article>
          <article>
-            <h2>Today I am choosing to leave the SeniorLAW Center.</h2>
-               <p>
+            <h2 class="header">Today I am choosing to leave the SeniorLAW Center.</h2>
+               <p id="p3">
                   SeniorLAW Center has provided opportunities for me to learn and grow and I am grateful for the organization training me to become a better advocate. I invite you all to celebrate my choice because I am ready to graduate from SeniorLAW Center and explore new uncertainties. Thank you.
                </p>
-               <p>
-                  Returning to Alex's happy day prompt: a happy day for me is today, mostly because I haven't made a choice for myself in a while. It’s scary, exciting, and so many other feelings. But it’s different this time because I’m prepared. Send me off to the soft lyrics of <a href="https://www.youtube.com/watch?v=z6YXwaQMoFA">“There Will be Another”</a> by Bronze Radio Return.
+               <p id="p4">
+                  <b>Returning to Alex's happy day prompt:</b> a happy day for me is today, mostly because I haven't made a choice for myself in a while. It’s scary, exciting, and so many other feelings. But it’s different this time because I’m prepared. Send me off to the soft lyrics of <a id="link" href="https://www.youtube.com/watch?v=z6YXwaQMoFA">“There Will be Another”</a> by Bronze Radio Return.
+               </p>
+               <p id="p5">
+                  I will still be in Philadelphia. Please stay connected. You can find my contact information below.</a>
                </p>
                <p>
-                  I will still be in Philadelphia. Please stay connected. My personal email is <a href="cashhahuynh@gmail.com">cashhahuynh@gmail.com</a>.
+                  ch
                </p><hr>
          </article>
+
+         <script>
+
+            window.addEventListener("mouseover", function(funParagraph) {
+               funParagraph = document.getElementById("testP");
+               funParagraph.style.color = "black";
+            });
+
+            document.getElementById("p4").addEventListener("mouseover", mouseOver());
+            document.getElementById("p4").addEventListener("mouseout", mouseOut());
+
+            function changeImage() {
+                  document.getElementById("mouseTarget").innerHTML = ""
+                  let img = document.createElement("img");
+                  img.src = "images/mom.jpeg";
+                  let block = document.getElementById("mouseTarget");
+                  block.appendChild(img)
+                  img.setAttribute("style", "margine-top:10px;margin-bottom:10px;margin-right:50px;margin-left:50px;width:300px");
+                  img.onmouseover = function() {
+                     alert("My mom is one of those 4 women.")
+                  }
+               };
+
+            function mouseOver() {
+               let parapgraph = document.getElementById("p4");
+               parapgraph.onmouseover = function() {
+                  parapgraph.style.color = "yellow"
+               }
+            }
+
+            function mouseOut() {
+               let parapgraph = document.getElementById("p4");
+               parapgraph.onmouseout = function() {
+                  parapgraph.style.color = "black"
+               }
+            }
+
+         </script>
       </header>
       <footer>
-         <p>ch, she, her</p>
+         <form action="" id="form">
+            <label for="contactInfo">Contact Infomation:
+            <select name="contactInfo">
+               <option value="0"></option>
+               <option value="1">chuynh@duanemorris.com</option>
+               <option value="2">cashhahuynh@gmail.com</option>
+               <option value="3">(504) 408-4487</option>
+            </select>
+            </label>
+         </form>
       </footer>
    </main>
    </body>
